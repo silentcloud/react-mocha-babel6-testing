@@ -1,0 +1,28 @@
+{
+  "name": "react-mocha-babel6-testing",
+  "version": "0.0.1",
+  "description": "Unit testing React with Mocha & jsdom & babel6",
+  "author": "rjmuqiang@gmail.com",
+  "keywords": [
+    "react",
+    "babel6",
+    "mocha",
+    "testing"
+  ],
+  "devDependencies": {
+    "babel": "~6.3.13",
+    "babel-core": "~6.3.17",
+    "babel-preset-es2015": "~6.3.13",
+    "babel-preset-react": "~6.3.13",
+    "jsdom": "~7.2.0",
+    "mocha": "~2.3.4",
+    "react-addons-test-utils": "~0.14.3"
+  },
+  "dependencies": {
+    "react": "~0.14.3"
+  },
+  "scripts": {
+    "test": "mocha --require ./test/setup.js --compilers js:babel-core/register --recursive"
+  },
+  "license": "ISC"
+}
