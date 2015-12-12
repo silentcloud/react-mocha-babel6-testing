@@ -7,10 +7,6 @@ module.exports = React.createClass({
     };
   },
 
-  componentDidMount: function() {
-    this.setDone(this.refs.done.checked);
-  },
-
   onChange: function(event) {
     this.setDone(event.target.checked);
   },
@@ -24,8 +20,8 @@ module.exports = React.createClass({
   render: function() {
     return (
       <label>
-        <input ref="done" type="checkbox" defaultChecked={this.state.done} onChange={this.onChange} />
-        {this.props.name}
+        <input type="checkbox" checked={this.state.done} onChange={this.onChange} />
+        {this.state.done ? 'checked' : 'not checked'}
       </label>
     );
   },
